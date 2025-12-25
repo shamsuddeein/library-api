@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -24,6 +25,9 @@ SECRET_KEY = 'django-insecure-ps@$%edlohz@8e2b*$x=6i779y!lxi_%9_2!qhsh&_ya)zk-z)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+
 
 ALLOWED_HOSTS = [".render.com", "localhost", "127.0.0.1"]
 

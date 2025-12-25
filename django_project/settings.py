@@ -29,7 +29,7 @@ DEBUG = True
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = [".render.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["https://library-api-hend.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.WhiteNoiseMiddleware', #new
+    'whitenoise.middleware.WhiteNoiseMiddleware', #new
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

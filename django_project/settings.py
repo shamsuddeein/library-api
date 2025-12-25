@@ -29,7 +29,13 @@ DEBUG = True
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ["https://library-api-hend.onrender.com", "localhost", "127.0.0.1"]
+# Allow all host headers
+ALLOWED_HOSTS = [
+    "library-api-hend.onrender.com",
+    ".onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
